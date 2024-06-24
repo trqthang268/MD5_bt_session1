@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 2</title>
+</head>
+<body>
+    <script>
+        function calculateSum(numbers) {
+            return numbers.reduce((sum,number)=>sum+number,0);
+        }
+        console.log(calculateSum([1,2,3,4,5]));
+        console.log(calculateSum([0,0,0,0,0]));
+        console.log(calculateSum([10,-10,10,10]));
+        console.log(calculateSum([100,200,300]));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(number) {
+            if (number < 2) {
+                return false;
+            }
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function calculateSumOfPrimes(numbers) {
+            const primes = numbers.filter(isPrime);
+            return primes.reduce((sum, number) => sum + number, 0);
+        }
+        console.log(calculateSumOfPrimes([1,2,3,4,5]));
+        console.log(calculateSumOfPrimes([0,1,4,6,8,9]));
+        console.log(calculateSumOfPrimes([2,3,5,7,11]));
+        console.log(calculateSumOfPrimes([-3,-2,0,2,3]));
+        console.log(calculateSumOfPrimes([10,13,17,19,23]));
+    </script>
+</body>
+</html>
